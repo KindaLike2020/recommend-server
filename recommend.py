@@ -18,7 +18,8 @@ import operator
 
 
 def request_mongo_data():
-    mongo_uri = 'mongodb+srv://tatiana:tatiana0824@cluster0.cigjb.mongodb.net/UserInfo?retryWrites=true&w=majority'
+    #mongo_uri = 'mongodb+srv://tatiana:tatiana0824@cluster0.cigjb.mongodb.net/UserInfo?retryWrites=true&w=majority'
+    mongo_uri = os.environ['mongoURL']
     conn = MongoClient(mongo_uri)
     
     reviews = conn['UserInfo']['reviews'].find()
