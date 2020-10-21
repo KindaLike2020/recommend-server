@@ -15,6 +15,7 @@ import numpy as np
 from operator import itemgetter 
 from scipy import stats
 import operator
+import os
 
 
 def request_mongo_data():
