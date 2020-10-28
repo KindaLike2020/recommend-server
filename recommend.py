@@ -132,14 +132,18 @@ def recommend(userId, restaurant_list, reviewCountCut, userCountCut):
         
         dict_kid['no'] = 0
         dict_kid['yes'] = 1
+        dict_kid[' '] = 2
         dict_relationship['no'] = 0
         dict_relationship['yes'] = 1
+        dict_relationship[' '] = 2
         dict_veg['vegetarian'] = 0
         dict_veg['vegan'] = 1
         dict_veg['none'] = 2
+        dict_veg[' '] = 3
         dict_religion['halal'] = 0
         dict_religion['kosher'] = 1
         dict_religion['none'] = 2
+        dict_religion[' '] = 3
         
         loc_age = profile_df.columns.get_loc("age")
         loc_kids = profile_df.columns.get_loc("kids")
