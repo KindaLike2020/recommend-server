@@ -7,7 +7,6 @@ Created on Thu Oct  1 19:21:57 2020
 """
 import pandas as pd
 from pymongo import MongoClient
-import pymongo
 from surprise import Dataset
 from surprise import Reader
 from surprise import KNNWithMeans
@@ -16,7 +15,6 @@ from operator import itemgetter
 from scipy import stats
 import operator
 import os
-
 
 def request_mongo_data():
     mongo_uri = os.environ['mongoURL']
